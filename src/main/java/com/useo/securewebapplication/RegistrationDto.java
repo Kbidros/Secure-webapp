@@ -5,6 +5,9 @@ import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
 import jakarta.validation.constraints.Pattern;
 
+
+// Denna klass är till för att validering av email och lösenord görs.
+
 public class RegistrationDto {
 
     @NotEmpty(message = "Username cannot be empty")

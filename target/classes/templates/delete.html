@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Delete Success</title>
+    <link rel="stylesheet" th:href="@{/css/delete.css}" />
 </head>
 <body>
-<h1>Delete Success</h1>
-<p>User deletion were successful.</p>
-<button onclick="window.location.href='/users'">Go to User List</button>
+<div class="container">
+    <h1>Delete Success</h1>
+    <p>User deletion was successful.</p>
+    <button onclick="window.location.href='/users'">Go to User List</button>
+</div>
 </body>
 </html>

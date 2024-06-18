@@ -1,4 +1,4 @@
-2024-06-18 01:01:14 [main] INFO  com.useo.securewebapplication.Tests - Starting Tests using Java 22.0.1 with PID 12133 (started by kristian in /Users/kristian/Documents/IT och Informationssäkerhet/secure-web-app 2)
-2024-06-18 01:01:14 [main] DEBUG com.useo.securewebapplication.Tests - Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-06-18 01:01:14 [main] INFO  com.useo.securewebapplication.Tests - No active profile set, falling back to 1 default profile: "default"
-2024-06-18 01:01:16 [main] INFO  com.useo.securewebapplication.Tests - Started Tests in 1.86 seconds (process running for 2.413)
+2024-06-18 19:42:20 [restartedMain] INFO  com.useo.securewebapplication.SecureWebApplication - Starting SecureWebApplication using Java 22.0.1 with PID 16886 (/Users/kristian/Documents/secure-web-app-kristian/target/classes started by kristian in /Users/kristian/Documents/secure-web-app-kristian)
+2024-06-18 19:42:20 [restartedMain] DEBUG com.useo.securewebapplication.SecureWebApplication - Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-18 19:42:20 [restartedMain] INFO  com.useo.securewebapplication.SecureWebApplication - No active profile set, falling back to 1 default profile: "default"
+2024-06-18 19:42:23 [restartedMain] INFO  com.useo.securewebapplication.SecureWebApplication - Started SecureWebApplication in 2.833 seconds (process running for 3.795)

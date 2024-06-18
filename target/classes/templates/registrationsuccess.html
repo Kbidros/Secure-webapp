@@ -6,6 +6,7 @@
     <link rel="stylesheet" th:href="@{/css/registrationsuccess.css}" />
 </head>
 <body>
+<div class="container">
 <h1>Registration success!</h1>
 <form th:action="@{/register}" method="get">
     <button type="submit">Register New Users</button>
@@ -16,9 +17,10 @@
 </form>
 <br>
 <form th:action="@{/logout}" method="post">
+    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
     <button type="submit">Sign out</button>
 
 </form>
-
+</div>
 </body>
 </html>

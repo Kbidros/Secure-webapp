@@ -3,11 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <title>Signed Out</title>
+  <link rel="stylesheet" th:href="@{/css/logout.css}" />
 </head>
 <body>
-<h1>You have now signed out.</h1>
-<form th:action="@{/}" method="get">
-  <button type="submit">Return to Homepage</button>
-</form>
+<div class="container">
+  <h1>You have now signed out.</h1>
+  <form th:action="@{/}" method="get">
+    <button type="submit">Return to Homepage</button>
+  </form>
+</div>
 </body>
 </html>

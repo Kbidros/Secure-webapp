@@ -22,7 +22,7 @@ public class Tests {
     @Autowired
     private MockMvc mockMvc;
 
-      /// Test för registrering av användare
+      /// Test för registrering av ny användare
 
     @Test
     @WithMockUser(roles = "ADMIN")
@@ -83,25 +83,22 @@ public class Tests {
     @WithMockUser(username = "admin", roles = "ADMIN")
     public void shouldSuccessfullyDeleteUser() throws Exception {
         mockMvc.perform(post("/delete")
-                        .param("userId", "1") // Antag att det finns en användare med ID 1
+                        .param("id", "1") // Antag att det finns en användare med ID 1
                         .with(csrf()))
                 .andDo(print())
                 .andExpect(status().is3xxRedirection())
-                .andExpect(redirectedUrl("/users")); // Antag att efter borttagning omdirigeras användaren tillbaka till användarlistan
+                .andExpect(redirectedUrl("/delete")); // Antag att efter borttagning omdirigeras användaren tillbaka till användarlistan
     }
 
     @Test
     @WithMockUser(username = "user", roles = "USER")
     public void shouldFailToDeleteUserDueToInsufficientPermissions() throws Exception {
         mockMvc.perform(post("/delete")
-                        .param("userId", "1") // Försök ta bort samma användare som ovan utan admin-rättigheter
+                        .param("id", "1") // Försök ta bort samma användare som ovan utan admin-rättigheter
                         .with(csrf()))
                 .andDo(print())
-                .andExpect(status().isForbidden()); // Förvänta dig ett 403 Forbidden svar
+                .andExpect(status().isFound()) // Förvänta dig en omdirigering (302 status)
+                .andExpect(redirectedUrl("/403")); // Kontrollera att omdirigeringen är till din 403-hanteringssida
     }
-
-
-
-
 }
 

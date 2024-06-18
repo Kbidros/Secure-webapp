@@ -13,8 +13,8 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.access.AccessDeniedHandler;
 
-@Configuration
-@EnableWebSecurity
+@Configuration // Markerar denna klass som en konfigurationsklass för Spring
+@EnableWebSecurity // Aktiverar Spring Securitys webbsäkerhetsstöd
 public class WebSecurityConfig {
 
     @Bean
@@ -31,10 +31,11 @@ public class WebSecurityConfig {
                         .permitAll()
                 )
                 .logout((logout) -> logout
-                        .logoutSuccessUrl("/logout-success")
+                        .logoutSuccessUrl("/logout")
                         .permitAll()
                 )
                 .exceptionHandling(exception -> exception
+                        // Hanterar åtkomst nekad situationer genom att omdirigera till en anpassad sida ( i mitt fall /403 )
                         .accessDeniedHandler(accessDeniedHandler())
                 );
 
@@ -43,6 +44,7 @@ public class WebSecurityConfig {
 
     @Bean
     public AccessDeniedHandler accessDeniedHandler() {
+        // Skapar en anpassad AccessDeniedHandler som omdirigerar till /403 vid åtkomst nekad
         return (request, response, accessDeniedException) -> {
             response.sendRedirect("/403");
         };
@@ -53,16 +55,17 @@ public class WebSecurityConfig {
         PasswordEncoder encoder = passwordEncoder();
         UserDetails admin = User.builder()
                 .username("admin")
-                .password(encoder.encode("123"))
+                .password(encoder.encode("123")) // Skapar en användare med rollen ADMIN och kodar lösenordet
                 .roles("ADMIN")
                 .build();
 
         UserDetails user = User.builder()
                 .username("user")
-                .password(encoder.encode("password"))
+                .password(encoder.encode("password")) // Samma fast för USER
                 .roles("USER")
                 .build();
 
+        // Returnerar en InMemoryUserDetailsManager med de skapade användarna
         return new InMemoryUserDetailsManager(admin, user);
     }
 
@@ -70,5 +73,6 @@ public class WebSecurityConfig {
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
+    // Skapar och returnerar en BCryptPasswordEncoder för lösenordskodning
 }
 

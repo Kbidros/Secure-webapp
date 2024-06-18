@@ -27,25 +27,26 @@ public class UserService {
 
     private static final Logger log = LoggerFactory.getLogger(UserService.class);
 
+    // Skapar en ny användare med validerade och hashade lösenord och sparar den både i databasen och i minnesbaserad autentisering
     public void saveUser(String username, String password, String email) {
         try {
             String cleanEmail = HtmlUtils.sanitizeEmail(email);
             String cleanPassword = HtmlUtils.sanitize(password);
             String hashedPassword = passwordEncoder.encode(cleanPassword);
 
-            log.debug("Skapa nytt konto för användare: {}", username);
+            log.debug("Creating a new account for user: {}", username);
             MyUsers.User newUser = new MyUsers.User();
             newUser.setUsername(username);
             newUser.setPassword(hashedPassword);
             newUser.setEmail(cleanEmail);
             userRepository.save(newUser);
 
-            // Add user to InMemoryUserDetailsManager
-            log.debug("Skapat information för användare: {}", username);
+
+            log.debug("Created user details for: {}", username);
             UserDetails user = User.builder()
                     .username(username)
-                    .password(hashedPassword)  // Use the hashed password
-                    .roles("USER")  // Assume default role as USER
+                    .password(hashedPassword)  // Använder det hashade lösenordet
+                    .roles("USER")  // Anta default roll som "USER"
                     .build();
             inMemoryUserDetailsManager.createUser(user);
 
@@ -56,8 +57,9 @@ public class UserService {
         }
     }
 
+    // Tar bort en användare från databasen om den finns
     public void deleteUser(Long userId) {
-        log.debug("Försök att ta bort användare med ID: {}", userId);
+        log.debug("Attempting to delete user with ID: {}", userId);
 
         Optional<MyUsers.User> user = userRepository.findById(userId);
         if (user.isPresent()) {
@@ -68,11 +70,12 @@ public class UserService {
         }
     }
 
-    // Metod för att hämta alla användare
+    // Returnerar en lista av alla registrerade användare
     public List<MyUsers.User> getAllUsers() {
         return userRepository.findAll();
     }
 
+    // Hittar och returnerar användare vars användarnamn innehåller den angivna strängen
     public List<MyUsers.User> findUsersByUsername(String username) {
         List<MyUsers.User> users = userRepository.findByUsernameContainingIgnoreCase(username);
         if (users.isEmpty()) {
