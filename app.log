@@ -1,4 +1,9 @@
-2024-06-18 19:42:20 [restartedMain] INFO  com.useo.securewebapplication.SecureWebApplication - Starting SecureWebApplication using Java 22.0.1 with PID 16886 (/Users/kristian/Documents/secure-web-app-kristian/target/classes started by kristian in /Users/kristian/Documents/secure-web-app-kristian)
-2024-06-18 19:42:20 [restartedMain] DEBUG com.useo.securewebapplication.SecureWebApplication - Running with Spring Boot v3.3.0, Spring v6.1.8
-2024-06-18 19:42:20 [restartedMain] INFO  com.useo.securewebapplication.SecureWebApplication - No active profile set, falling back to 1 default profile: "default"
-2024-06-18 19:42:23 [restartedMain] INFO  com.useo.securewebapplication.SecureWebApplication - Started SecureWebApplication in 2.833 seconds (process running for 3.795)
+2024-06-20 21:20:41 [restartedMain] INFO  com.useo.securewebapplication.SecureWebApplication - Starting SecureWebApplication using Java 22.0.1 with PID 31884 (/Users/kristian/Documents/secure-web-app-kristian/target/classes started by kristian in /Users/kristian/Documents/secure-web-app-kristian)
+2024-06-20 21:20:41 [restartedMain] DEBUG com.useo.securewebapplication.SecureWebApplication - Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-20 21:20:41 [restartedMain] INFO  com.useo.securewebapplication.SecureWebApplication - No active profile set, falling back to 1 default profile: "default"
+2024-06-20 21:20:44 [restartedMain] INFO  com.useo.securewebapplication.SecureWebApplication - Started SecureWebApplication in 2.641 seconds (process running for 3.29)
+2024-06-20 21:21:07 [http-nio-8080-exec-6] DEBUG com.useo.securewebapplication.UserService - Creating a new account for user: vaiana
+2024-06-20 21:21:07 [http-nio-8080-exec-6] DEBUG com.useo.securewebapplication.UserService - Created user details for: vaiana
+2024-06-20 21:21:07 [http-nio-8080-exec-6] INFO  com.useo.securewebapplication.UserService - New user registered successfully: vaiana
+2024-06-20 21:21:40 [http-nio-8080-exec-5] DEBUG com.useo.securewebapplication.UserService - Attempting to delete user with ID: 1
+2024-06-20 21:21:40 [http-nio-8080-exec-5] INFO  com.useo.securewebapplication.UserService - User deleted: vaiana

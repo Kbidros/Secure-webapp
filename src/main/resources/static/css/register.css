@@ -6,15 +6,17 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f4f4f4;
+    background-color: #efefef;
+    color: white;
 }
 
 .container {
-    background-color: #fff;
+    background-color: #363636;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     text-align: center;
+    width: 300px; /* Adjusted to match the login container width */
 }
 
 .form-group {
@@ -28,19 +30,28 @@ input[type="text"], input[type="password"], input[type="email"] {
     margin-top: 5px;
     margin-left: auto;
     margin-right: auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
 }
 
 button {
     padding: 10px 20px;
-    background-color: forestgreen;
+    background-color: darkorange;
     color: white;
+    font-weight: bold;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    width: 80%; /* Consistent with input fields */
+    margin-top: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, box-shadow 0.3s;
 }
 
 button:hover {
-    background-color: darkgreen;
+    background-color: #6b4307;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
 .error {

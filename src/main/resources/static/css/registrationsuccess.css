@@ -1,37 +1,47 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #efefef;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f4f4f4;
-    text-align: center; /* Lägg till denna rad för att centrera texten */
+    color: white;
+    text-align: center;
 }
 
 .container {
-    background-color: #fff;
+    background-color: #363636;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     text-align: center;
+    width: 300px;
 }
 
 button {
     padding: 10px 20px;
-    background-color: forestgreen;
+    background-color: darkorange;
     color: white;
+    font-weight: bold;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin: 10px 0; /* Lägg till denna rad för att ge lite utrymme mellan knapparna */
+    margin: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, box-shadow 0.3s;
 }
 
 button:hover {
-    background-color: darkgreen;
+    background-color: #6b4307;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.succ {
+    color: #1e90ff;
 }
 
 h1 {
-    margin-bottom: 20px; /* Lägg till denna rad för att ge lite utrymme under rubriken */
+    margin-bottom: 20px;
 }

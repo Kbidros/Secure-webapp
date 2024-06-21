@@ -12,15 +12,21 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.List;
 
-// Kontroller-klass som hanterar webbgränssnittets interaktioner
+/*
+Det här är min UserController-klass, som hanterar olika interaktioner i webbgränssnittet för min applikation.
+Jag injicerar UserService för att hantera användarrelaterade tjänster.
+Med @GetMapping("/users") hämtar jag och visar en lista av användare, som kan filtreras baserat på användarnamn.
+Jag visar ett registreringsformulär med @GetMapping("/register") och hanterar registreringsförfrågningar med @PostMapping("/register").
+Jag hanterar radering av användare baserat på ID med @PostMapping("/delete") och visar en bekräftelse på raderingen med @GetMapping("/delete").
+Jag visar en utloggningssida med @GetMapping("/logout") och en anpassad 403-sida vid åtkomstförbud med @GetMapping("/403").
+* */
+
 @Controller
 public class UserController {
 
-    // Injektion av UserService för att hantera användarrelaterade tjänster
     @Autowired
     private UserService userService;
 
-    // Hanterar GET-förfrågningar för att visa en lista av användare, kan filtreras med 'search'
     @GetMapping("/users")
     public String listUsers(@RequestParam(name = "search", required = false) String search, Model model) {
         List<MyUsers.User> users = (search == null) ? userService.getAllUsers() : userService.findUsersByUsername(search);
@@ -33,14 +39,12 @@ public class UserController {
         return "users";
     }
 
-    // Hanterar GET-förfrågningar för att visa registreringsformuläret
     @GetMapping("/register")
     public String showRegistrationForm(Model model) {
         model.addAttribute("registrationDto", new RegistrationDto());
         return "register";
     }
 
-    // Hanterar POST-förfrågningar för att registrera en ny användare
     @PostMapping("/register")
     public String register(@Valid RegistrationDto registrationDto, BindingResult result, Model model) {
         if (result.hasErrors()) {
@@ -51,7 +55,6 @@ public class UserController {
         return "redirect:/registrationsuccess";
     }
 
-    // Hanterar POST-förfrågningar för att radera en användare baserat på ID
     @PostMapping("/delete")
     public String deleteUser(@RequestParam("id") Long userId, RedirectAttributes redirectAttributes) {
         userService.deleteUser(userId);
@@ -59,19 +62,16 @@ public class UserController {
         return "redirect:/delete";
     }
 
-    // Visar ett meddelande om att användaren har raderats framgångsrikt
     @GetMapping("/delete")
     public String showDeleteSuccess() {
         return "delete";
     }
 
-    // Visar sidan för framgångsrik utloggning
     @GetMapping("/logout")
     public String showLogoutPage() {
         return "logout";
     }
 
-    // Visar en anpassad 403-sida vid åtkomstförbud
     @GetMapping("/403")
     public String forbidden() {
         return "403";

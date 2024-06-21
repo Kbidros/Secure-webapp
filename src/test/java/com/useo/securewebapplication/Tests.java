@@ -65,7 +65,7 @@ public class Tests {
         mockMvc.perform(get("/"))
                 .andDo(print())
                 .andExpect(status().isOk())
-                .andExpect(view().name("home")); // Antag att "index" är namnet på din startsidans vy
+                .andExpect(view().name("home"));
     }
 
     @Test
@@ -73,7 +73,7 @@ public class Tests {
         mockMvc.perform(get("/").with(user("user").roles("USER")))
                 .andDo(print())
                 .andExpect(status().isOk())
-                .andExpect(view().name("home")); // Använd samma vy som ovan
+                .andExpect(view().name("home"));
     }
 
 
@@ -83,11 +83,11 @@ public class Tests {
     @WithMockUser(username = "admin", roles = "ADMIN")
     public void shouldSuccessfullyDeleteUser() throws Exception {
         mockMvc.perform(post("/delete")
-                        .param("id", "1") // Antag att det finns en användare med ID 1
+                        .param("id", "1") // Här antar vi att det finns en användare med ID 1
                         .with(csrf()))
                 .andDo(print())
                 .andExpect(status().is3xxRedirection())
-                .andExpect(redirectedUrl("/delete")); // Antag att efter borttagning omdirigeras användaren tillbaka till användarlistan
+                .andExpect(redirectedUrl("/delete")); // Efter borttagning omdirigeras användaren tillbaka till användarlistan
     }
 
     @Test

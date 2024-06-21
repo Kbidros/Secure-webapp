@@ -3,14 +3,14 @@
       xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity6" lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Securitas</title>
+    <title>K-Secure</title>
     <link rel="stylesheet" th:href="@{/css/home.css}" />
 </head>
 <body>
 <div class="container">
     <!-- Visa detta om användaren inte är inloggad -->
     <div sec:authorize="!isAuthenticated()" class="welcome-section">
-        <h1>Welcome to Securitas!</h1>
+        <h1>Welcome to <br><span class="companyName">K-Secure</span></h1>
         <form th:action="@{/login}" method="get">
             <button type="submit" class="btn">Login</button>
         </form>
@@ -18,18 +18,18 @@
 
     <!-- Visa detta om användaren är inloggad -->
     <div sec:authorize="isAuthenticated()" class="authenticated-section">
-        <h2>Welcome, you are now logged in as <span sec:authentication="name">admin</span>!</h2>
+        <h2>Welcome, you are now logged in as <span class="loginuser" sec:authentication="name">admin</span>!</h2>
         <form th:action="@{/register}" method="get">
-            <button type="submit" class="btn">Register New Users</button>
+            <button type="submit" class="btn">Register new users</button>
         </form>
         <br>
         <form th:action="@{/users}" method="get">
-            <button type="submit" class="btn">Users</button>
+            <button type="submit" class="btn">List of users</button>
         </form>
         <br>
         <form th:action="@{/logout}" method="post">
             <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
-            <button type="submit" class="btn">Sign out</button>
+            <button type="submit" class="btn2">Sign out</button>
         </form>
     </div>
 </div>

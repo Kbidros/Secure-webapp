@@ -13,6 +13,20 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
+
+/*
+Det här är min UserService-klass, som hanterar olika tjänster relaterade till användarhantering i min applikation.
+
+Injektioner: Jag injicerar UserRepository, InMemoryUserDetailsManager, och PasswordEncoder för att hantera användarrelaterade operationer.
+Registrering av användare: I saveUser-metoden skapar jag en ny användare genom att sanera och hash lösenordet, och
+sparar användaren både i databasen och i minnesbaserad autentisering. Jag loggar relevant information under processen.
+Radering av användare: I deleteUser-metoden försöker jag radera en användare baserat på användar-ID. Om användaren inte finns loggar jag en varning.
+Hämta alla användare: I getAllUsers-metoden returnerar jag en lista över alla registrerade användare.
+Sök användare efter användarnamn: I findUsersByUsername-metoden söker jag efter och returnerar användare vars
+användarnamn innehåller den angivna strängen, och loggar resultatet.
+Denna klass säkerställer att användare hanteras på ett säkert och strukturerat sätt, inklusive korrekt sanering och hashning av känslig data.
+*/
+
 @Service
 public class UserService {
 
@@ -27,7 +41,6 @@ public class UserService {
 
     private static final Logger log = LoggerFactory.getLogger(UserService.class);
 
-    // Skapar en ny användare med validerade och hashade lösenord och sparar den både i databasen och i minnesbaserad autentisering
     public void saveUser(String username, String password, String email) {
         try {
             String cleanEmail = HtmlUtils.sanitizeEmail(email);
@@ -45,8 +58,8 @@ public class UserService {
             log.debug("Created user details for: {}", username);
             UserDetails user = User.builder()
                     .username(username)
-                    .password(hashedPassword)  // Använder det hashade lösenordet
-                    .roles("USER")  // Anta default roll som "USER"
+                    .password(hashedPassword)
+                    .roles("USER")
                     .build();
             inMemoryUserDetailsManager.createUser(user);
 
@@ -57,7 +70,6 @@ public class UserService {
         }
     }
 
-    // Tar bort en användare från databasen om den finns
     public void deleteUser(Long userId) {
         log.debug("Attempting to delete user with ID: {}", userId);
 
@@ -70,12 +82,10 @@ public class UserService {
         }
     }
 
-    // Returnerar en lista av alla registrerade användare
     public List<MyUsers.User> getAllUsers() {
         return userRepository.findAll();
     }
 
-    // Hittar och returnerar användare vars användarnamn innehåller den angivna strängen
     public List<MyUsers.User> findUsersByUsername(String username) {
         List<MyUsers.User> users = userRepository.findByUsernameContainingIgnoreCase(username);
         if (users.isEmpty()) {

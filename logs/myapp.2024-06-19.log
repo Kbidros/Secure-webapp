@@ -1,0 +1,93 @@
+2024-06-19 09:57:06 [restartedMain] INFO  c.u.s.SecureWebApplication - Starting SecureWebApplication using Java 22.0.1 with PID 26917 (/Users/kristian/Documents/secure-web-app-kristian/target/classes started by kristian in /Users/kristian/Documents/secure-web-app-kristian)
+2024-06-19 09:57:06 [restartedMain] DEBUG c.u.s.SecureWebApplication - Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-19 09:57:06 [restartedMain] INFO  c.u.s.SecureWebApplication - No active profile set, falling back to 1 default profile: "default"
+2024-06-19 09:57:08 [restartedMain] INFO  c.u.s.SecureWebApplication - Started SecureWebApplication in 2.187 seconds (process running for 2.784)
+2024-06-19 09:57:50 [restartedMain] INFO  c.u.s.SecureWebApplication - Starting SecureWebApplication using Java 22.0.1 with PID 26957 (/Users/kristian/Documents/secure-web-app-kristian/target/classes started by kristian in /Users/kristian/Documents/secure-web-app-kristian)
+2024-06-19 09:57:50 [restartedMain] DEBUG c.u.s.SecureWebApplication - Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-19 09:57:50 [restartedMain] INFO  c.u.s.SecureWebApplication - No active profile set, falling back to 1 default profile: "default"
+2024-06-19 09:57:52 [restartedMain] INFO  c.u.s.SecureWebApplication - Started SecureWebApplication in 2.129 seconds (process running for 2.895)
+2024-06-19 09:58:01 [restartedMain] INFO  c.u.s.SecureWebApplication - Starting SecureWebApplication using Java 22.0.1 with PID 26966 (/Users/kristian/Documents/secure-web-app-kristian/target/classes started by kristian in /Users/kristian/Documents/secure-web-app-kristian)
+2024-06-19 09:58:01 [restartedMain] DEBUG c.u.s.SecureWebApplication - Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-19 09:58:01 [restartedMain] INFO  c.u.s.SecureWebApplication - No active profile set, falling back to 1 default profile: "default"
+2024-06-19 09:58:03 [restartedMain] INFO  c.u.s.SecureWebApplication - Started SecureWebApplication in 2.265 seconds (process running for 2.917)
+2024-06-19 09:59:14 [http-nio-8080-exec-4] DEBUG c.u.securewebapplication.UserService - Creating a new account for user: James
+2024-06-19 09:59:14 [http-nio-8080-exec-4] DEBUG c.u.securewebapplication.UserService - Created user details for: James
+2024-06-19 09:59:14 [http-nio-8080-exec-4] INFO  c.u.securewebapplication.UserService - New user registered successfully: James
+2024-06-19 09:59:39 [restartedMain] INFO  c.u.s.SecureWebApplication - Starting SecureWebApplication using Java 22.0.1 with PID 26996 (/Users/kristian/Documents/secure-web-app-kristian/target/classes started by kristian in /Users/kristian/Documents/secure-web-app-kristian)
+2024-06-19 09:59:39 [restartedMain] DEBUG c.u.s.SecureWebApplication - Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-19 09:59:39 [restartedMain] INFO  c.u.s.SecureWebApplication - No active profile set, falling back to 1 default profile: "default"
+2024-06-19 09:59:42 [restartedMain] INFO  c.u.s.SecureWebApplication - Started SecureWebApplication in 2.769 seconds (process running for 3.708)
+2024-06-19 09:59:58 [http-nio-8080-exec-4] DEBUG c.u.securewebapplication.UserService - Creating a new account for user: Maison
+2024-06-19 09:59:58 [http-nio-8080-exec-4] DEBUG c.u.securewebapplication.UserService - Created user details for: Maison
+2024-06-19 09:59:58 [http-nio-8080-exec-4] INFO  c.u.securewebapplication.UserService - New user registered successfully: Maison
+2024-06-19 10:00:10 [http-nio-8080-exec-6] DEBUG c.u.securewebapplication.UserService - Creating a new account for user: olle
+2024-06-19 10:00:10 [http-nio-8080-exec-6] DEBUG c.u.securewebapplication.UserService - Created user details for: olle
+2024-06-19 10:00:10 [http-nio-8080-exec-6] INFO  c.u.securewebapplication.UserService - New user registered successfully: olle
+2024-06-19 10:00:14 [http-nio-8080-exec-4] INFO  c.u.securewebapplication.UserService - Found 2 users with username containing: o
+2024-06-19 10:00:17 [http-nio-8080-exec-7] INFO  c.u.securewebapplication.UserService - Found 2 users with username containing: o
+2024-06-19 10:00:21 [http-nio-8080-exec-2] INFO  c.u.securewebapplication.UserService - Found 1 users with username containing: olle
+2024-06-19 10:00:25 [http-nio-8080-exec-4] INFO  c.u.securewebapplication.UserService - Found 1 users with username containing: m
+2024-06-19 10:00:28 [http-nio-8080-exec-7] INFO  c.u.securewebapplication.UserService - Found 1 users with username containing: oll
+2024-06-19 10:00:29 [http-nio-8080-exec-9] DEBUG c.u.securewebapplication.UserService - Attempting to delete user with ID: 2
+2024-06-19 10:00:29 [http-nio-8080-exec-9] INFO  c.u.securewebapplication.UserService - User deleted: olle
+2024-06-19 10:00:33 [http-nio-8080-exec-6] DEBUG c.u.securewebapplication.UserService - Attempting to delete user with ID: 1
+2024-06-19 10:00:33 [http-nio-8080-exec-6] INFO  c.u.securewebapplication.UserService - User deleted: Maison
+2024-06-19 10:00:41 [http-nio-8080-exec-9] DEBUG c.u.securewebapplication.UserService - Creating a new account for user: krille
+2024-06-19 10:00:41 [http-nio-8080-exec-9] DEBUG c.u.securewebapplication.UserService - Created user details for: krille
+2024-06-19 10:00:41 [http-nio-8080-exec-9] INFO  c.u.securewebapplication.UserService - New user registered successfully: krille
+2024-06-19 10:01:41 [main] INFO  com.useo.securewebapplication.Tests - Starting Tests using Java 22.0.1 with PID 27011 (started by kristian in /Users/kristian/Documents/secure-web-app-kristian)
+2024-06-19 10:01:41 [main] DEBUG com.useo.securewebapplication.Tests - Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-19 10:01:41 [main] INFO  com.useo.securewebapplication.Tests - No active profile set, falling back to 1 default profile: "default"
+2024-06-19 10:01:44 [main] INFO  com.useo.securewebapplication.Tests - Started Tests in 3.193 seconds (process running for 4.391)
+2024-06-19 10:01:50 [main] INFO  com.useo.securewebapplication.Tests - Starting Tests using Java 22.0.1 with PID 27021 (started by kristian in /Users/kristian/Documents/secure-web-app-kristian)
+2024-06-19 10:01:50 [main] DEBUG com.useo.securewebapplication.Tests - Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-19 10:01:50 [main] INFO  com.useo.securewebapplication.Tests - No active profile set, falling back to 1 default profile: "default"
+2024-06-19 10:01:52 [main] INFO  com.useo.securewebapplication.Tests - Started Tests in 2.462 seconds (process running for 3.349)
+2024-06-19 10:01:53 [main] DEBUG c.u.securewebapplication.UserService - Creating a new account for user: newuser
+2024-06-19 10:01:53 [main] DEBUG c.u.securewebapplication.UserService - Created user details for: newuser
+2024-06-19 10:01:53 [main] INFO  c.u.securewebapplication.UserService - New user registered successfully: newuser
+2024-06-19 10:02:01 [main] INFO  com.useo.securewebapplication.Tests - Starting Tests using Java 22.0.1 with PID 27028 (started by kristian in /Users/kristian/Documents/secure-web-app-kristian)
+2024-06-19 10:02:01 [main] DEBUG com.useo.securewebapplication.Tests - Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-19 10:02:01 [main] INFO  com.useo.securewebapplication.Tests - No active profile set, falling back to 1 default profile: "default"
+2024-06-19 10:02:03 [main] INFO  com.useo.securewebapplication.Tests - Started Tests in 2.535 seconds (process running for 3.567)
+2024-06-19 10:02:15 [main] INFO  com.useo.securewebapplication.Tests - Starting Tests using Java 22.0.1 with PID 27036 (started by kristian in /Users/kristian/Documents/secure-web-app-kristian)
+2024-06-19 10:02:15 [main] DEBUG com.useo.securewebapplication.Tests - Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-19 10:02:15 [main] INFO  com.useo.securewebapplication.Tests - No active profile set, falling back to 1 default profile: "default"
+2024-06-19 10:02:18 [main] INFO  com.useo.securewebapplication.Tests - Started Tests in 3.29 seconds (process running for 4.208)
+2024-06-19 10:02:25 [main] INFO  com.useo.securewebapplication.Tests - Starting Tests using Java 22.0.1 with PID 27045 (started by kristian in /Users/kristian/Documents/secure-web-app-kristian)
+2024-06-19 10:02:25 [main] DEBUG com.useo.securewebapplication.Tests - Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-19 10:02:25 [main] INFO  com.useo.securewebapplication.Tests - No active profile set, falling back to 1 default profile: "default"
+2024-06-19 10:02:27 [main] INFO  com.useo.securewebapplication.Tests - Started Tests in 2.128 seconds (process running for 2.67)
+2024-06-19 10:02:42 [main] INFO  com.useo.securewebapplication.Tests - Starting Tests using Java 22.0.1 with PID 27055 (started by kristian in /Users/kristian/Documents/secure-web-app-kristian)
+2024-06-19 10:02:42 [main] DEBUG com.useo.securewebapplication.Tests - Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-19 10:02:42 [main] INFO  com.useo.securewebapplication.Tests - No active profile set, falling back to 1 default profile: "default"
+2024-06-19 10:02:44 [main] INFO  com.useo.securewebapplication.Tests - Started Tests in 2.252 seconds (process running for 3.185)
+2024-06-19 10:02:44 [main] DEBUG c.u.securewebapplication.UserService - Attempting to delete user with ID: 1
+2024-06-19 10:02:44 [main] WARN  c.u.securewebapplication.UserService - User not found with ID: 1
+2024-06-19 10:02:51 [main] INFO  com.useo.securewebapplication.Tests - Starting Tests using Java 22.0.1 with PID 27063 (started by kristian in /Users/kristian/Documents/secure-web-app-kristian)
+2024-06-19 10:02:51 [main] DEBUG com.useo.securewebapplication.Tests - Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-19 10:02:51 [main] INFO  com.useo.securewebapplication.Tests - No active profile set, falling back to 1 default profile: "default"
+2024-06-19 10:02:53 [main] INFO  com.useo.securewebapplication.Tests - Started Tests in 2.724 seconds (process running for 3.354)
+2024-06-19 10:03:30 [http-nio-8080-exec-7] DEBUG c.u.securewebapplication.UserService - Attempting to delete user with ID: 3
+2024-06-19 10:03:30 [http-nio-8080-exec-7] INFO  c.u.securewebapplication.UserService - User deleted: krille
+2024-06-19 11:42:25 [restartedMain] INFO  c.u.s.SecureWebApplication - Starting SecureWebApplication using Java 22.0.1 with PID 29162 (/Users/kristian/Documents/secure-web-app-kristian/target/classes started by kristian in /Users/kristian/Documents/secure-web-app-kristian)
+2024-06-19 11:42:25 [restartedMain] DEBUG c.u.s.SecureWebApplication - Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-19 11:42:25 [restartedMain] INFO  c.u.s.SecureWebApplication - No active profile set, falling back to 1 default profile: "default"
+2024-06-19 11:42:32 [restartedMain] INFO  c.u.s.SecureWebApplication - Started SecureWebApplication in 8.319 seconds (process running for 11.995)
+2024-06-19 11:42:41 [restartedMain] INFO  c.u.s.SecureWebApplication - Starting SecureWebApplication using Java 22.0.1 with PID 29177 (/Users/kristian/Documents/secure-web-app-kristian/target/classes started by kristian in /Users/kristian/Documents/secure-web-app-kristian)
+2024-06-19 11:42:41 [restartedMain] DEBUG c.u.s.SecureWebApplication - Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-19 11:42:41 [restartedMain] INFO  c.u.s.SecureWebApplication - No active profile set, falling back to 1 default profile: "default"
+2024-06-19 11:44:53 [http-nio-8080-exec-9] DEBUG c.u.securewebapplication.UserService - Creating a new account for user: olof
+2024-06-19 11:44:53 [http-nio-8080-exec-9] DEBUG c.u.securewebapplication.UserService - Created user details for: olof
+2024-06-19 11:44:53 [http-nio-8080-exec-9] INFO  c.u.securewebapplication.UserService - New user registered successfully: olof
+2024-06-19 11:45:14 [http-nio-8080-exec-3] DEBUG c.u.securewebapplication.UserService - Creating a new account for user: krille
+2024-06-19 11:45:14 [http-nio-8080-exec-3] DEBUG c.u.securewebapplication.UserService - Created user details for: krille
+2024-06-19 11:45:14 [http-nio-8080-exec-3] INFO  c.u.securewebapplication.UserService - New user registered successfully: krille
+2024-06-19 11:45:19 [http-nio-8080-exec-10] INFO  c.u.securewebapplication.UserService - Found 1 users with username containing: k
+2024-06-19 11:45:22 [http-nio-8080-exec-4] INFO  c.u.securewebapplication.UserService - Found 2 users with username containing: 
+2024-06-19 11:45:26 [http-nio-8080-exec-9] DEBUG c.u.securewebapplication.UserService - Attempting to delete user with ID: 2
+2024-06-19 11:45:26 [http-nio-8080-exec-9] INFO  c.u.securewebapplication.UserService - User deleted: krille
+2024-06-19 11:54:29 [main] INFO  com.useo.securewebapplication.Tests - Starting Tests using Java 22.0.1 with PID 29402 (started by kristian in /Users/kristian/Documents/secure-web-app-kristian)
+2024-06-19 11:54:29 [main] DEBUG com.useo.securewebapplication.Tests - Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-19 11:54:29 [main] INFO  com.useo.securewebapplication.Tests - No active profile set, falling back to 1 default profile: "default"
+2024-06-19 11:54:32 [main] INFO  com.useo.securewebapplication.Tests - Started Tests in 3.223 seconds (process running for 4.26)
